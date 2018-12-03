@@ -1,0 +1,27 @@
+package validationapiblog.test;
+
+import java.util.Set;
+import javax.validation.ConstraintViolation;
+import javax.validation.Validation;
+import javax.validation.Validator;
+import javax.validation.ValidatorFactory;
+import validationapiblog.model.Member;
+import org.junit.Test;
+import static org.junit.Assert.*;
+public class ValidationAPIUnitTest {
+
+    public ValidationAPIUnitTest() {
+    }
+
+    @Test
+    public void testMemberWithNoValues() {
+        Member member = new Member();
+
+        // validate the input
+        ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
+        Validator validator = factory.getValidator();
+        Set<constraintviolation<member>> violations = validator.validate(member);
+        assertEquals(violations.size(), 5);
+    }
+}
+</constraintviolation<member>
