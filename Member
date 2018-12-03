@@ -67,6 +67,12 @@ public class Member {
         if (this.dateOfBirth != null) {
             // calculate age of member here
         }
+        if (age <= 25){
+        // If the age of the employee is less than or equal to 25 he will receive 57.90 GBP per week.
+        }
+        if (age >25) {
+        // If the age of the employee is greater than 25 he will receive 73.10 GBP per week.
+        }        
         return null;
     }
 
