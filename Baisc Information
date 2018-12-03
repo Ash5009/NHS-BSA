@@ -10,6 +10,7 @@ public class Member {
     private String emailAddress = null;
     private Date dateOfBirth = null;
     private Amount amount = null;
+    private double monthlySalary = salary;
 
     public Member() {
     }
@@ -60,6 +61,36 @@ public class Member {
     public void setEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
     }
+}
+public void setmonthlySalary(double salary) {
+        monthlySalary = salary;
+    }
+ 
+    public double getmonthlySalary() {
+        return monthlySalary;
+    }
+ 
+    public double yearlySalary() {
+        double yearlySalary;
+        yearlySalary = (monthlySalary * 12);
+        return yearlySalary;
+    }
+ 
+    public double yearlySalaryIncrease() {
+        double yearlySalaryIncrease;
+        yearlySalaryIncrease = (((yearlySalary() * (0.1)) + yearlySalary()));
+        return yearlySalaryIncrease;
+    }
+ 
+    public void displayYearlySalary() {
+        System.out.printf("%s %s's Yearly Salary is $%.2f\n", firstName, lastName,
+           yearlySalary());
+    }
+ 
+    public void displayYearlySalaryIncrease() {
+        System.out.printf("%s %s = $%.2f\n", firstName, lastName, yearlySalaryIncrease());
+    }
+ 
 }
 public class RegularAmount {
     private Frequency frequency;
