@@ -1,0 +1,79 @@
+package validationapiblog.model;
+
+import java.util.Date;
+import validationapiblog.enums.Gender;
+public class Member {
+
+    private String lastName = null;
+    private String firstName = null;
+    private Gender gender = null;
+    private String emailAddress = null;
+    private Date dateOfBirth = null;
+    private Amount amount = null;
+
+    public Member() {
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public Date getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(Date dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public Integer getAge() {
+        if (this.dateOfBirth != null) {
+            // calculate age of member here
+        }
+        return null;
+    }
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
+}
+public class RegularAmount {
+    private Frequency frequency;
+    private String amount;
+    public Frequency getFrequency() {
+        return frequency;
+    }
+    public void setFrequency(Frequency frequency) {
+        this.frequency = frequency;
+    }
+    public String getAmount() {
+        return amount;
+    }
+    public void setAmount(String amount) {
+        this.amount = amount;
+    }
+}
